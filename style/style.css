@@ -1,0 +1,285 @@
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+  color: #0a3871;
+  background: #e5e5e5;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+.contenedor-botonesPrincipal img {
+  padding-bottom: 30px;
+}
+
+.contenedor-botonesPrincipal {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor-botonesPrincipal input,
+.modal-content input {
+  width: 250px;
+  height: 60px;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #0a3871;
+  border-width: thin;
+  border-radius: 10px;
+  border-color: #0a3871;
+  margin-bottom: 2em;
+  transition: 1s all;
+}
+
+.contenedor-botonesPrincipal input:hover,
+.modal-content input,
+.btn-words input:hover {
+  color: #ffffff;
+  background: #0a3871;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.contenedor-agregarPalabras {
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 1em;
+  display: none;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.txt-words {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+.txt-words label {
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.txt-words input {
+  width: 40%;
+  height: 35px;
+  margin: 2em 0;
+  color: #0a3871;
+  border: 1px solid #646464;
+  border-radius: 5px;
+  font-size: 20px;
+  background: #e5e5e5;
+}
+
+.txt-words input:focus {
+  outline: none;
+}
+
+.alert {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 12px;
+}
+
+.alert img {
+  margin-right: 1em;
+}
+
+.btn-words {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+
+.btn-words input {
+  width: 40%;
+  height: 3em;
+  font-size: 1em;
+  background: #e5e5e5;
+  color: #0a3871;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  border-width: thin;
+  border-color: #0a3871;
+  border-radius: 8px;
+  transition: 1s all;
+}
+
+.contenedor-Game {
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+  display: none;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+#contenedor-canvas {
+  width: 50%;
+  height: 70%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#canvas {
+  border: 1px solid #d9d9d9;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+#contenedor-guiones,
+.contenedor-letrasincorrectas {
+  width: 50%;
+  height: 2em;
+  display: flex;
+  justify-content: center;
+}
+
+.contenedor-letrasincorrectas {
+  margin-top: 1em;
+  box-sizing: border-box;
+}
+
+.line {
+  width: 20px;
+  margin: 0 1em;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+#input-oculto {
+  width: 100%;
+  height: 5px;
+  opacity: 0;
+  display: none;
+  box-sizing: border-box;
+}
+
+.modal {
+  display: none;
+
+  position: fixed;
+
+  z-index: 1;
+
+  padding-top: 100px;
+
+  left: 0;
+  top: 0;
+  width: 100%;
+
+  height: 100%;
+
+  overflow: auto;
+
+  background-color: rgb(0, 0, 0);
+
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal-content h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(24, 24, 24);
+}
+.modal-content p {
+  font-size: 20px;
+  color: #007914;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  margin: 1em 0 1em 0;
+  color: #646464;
+}
+
+.footer + span {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  .contenedor-Game,
+  .contenedor-botonesPrincipal,
+  .contenedor-agregarPalabras,
+  #contenedor-guiones,
+  .textoMobile {
+    width: 100%;
+  }
+
+  .btn-words {
+    font-size: 13px;
+  }
+
+  #contenedor-canvas {
+    width: 90%;
+    height: 70%;
+  }
+
+  #input-oculto {
+    display: inline;
+  }
+  .txt-words input {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .contenedor-Game,
+  .contenedor-botonesPrincipal,
+  .contenedor-agregarPalabras {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .contenedor-Game,
+  .contenedor-botonesPrincipal,
+  .contenedor-agregarPalabras {
+    width: 80%;
+  }
+}

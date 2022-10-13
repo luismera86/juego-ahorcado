@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Ahorcado - Alura</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <main class="wrap">
+        <section class="contenedor-botonesPrincipal">
+            <img src="img/logo.png" alt="Logo de Alaura">
+            <input type="button" id="startGame" value="Iniciar Juego">
+            <input type="button" id="addWord" value="Agregar Nueva Palabra">
+        </section>
+
+        <section class="contenedor-agregarPalabras">
+            <div class="txt-words">
+                <label for="addWords">Ingresar una Palabra</label>
+                <input type="text" name="addWords" id="addWords" placeholder="Escriba su Palabra">
+            </div>
+
+            <div class="alert">
+                <img src="img/Alert.svg" alt="Alerta">
+                <p>Máximo 8 letras</p>
+            </div>
+
+            <div class="btn-words">
+                <input type="button" id="saveStart" value="Guardar y Empezar">
+                <input type="button" id="cancel" value="Cancelar">
+            </div>
+
+        </section>
+        <section class="contenedor-Game">   
+            <div id="contenedor-canvas">
+                <canvas id="canvas" width="600" height="600"></canvas>
+            </div>
+            <div id="contenedor-guiones">
+               
+            </div>
+            <input autofocus id="input-oculto" type="text">
+            <div class="contenedor-letrasincorrectas">
+                <div class="letter"></div>
+            </div>
+        </section>
+       >
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <h1 class="gameOver"></h1>
+                <p class="palabraCorrecta"></p>
+               <div class="btn-words">
+                <input type="button" value="Jugar de Nuevo" id="nuevoJuego">
+                <input type="button" value="Cancelar" id="cancel2">
+               </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+    <script src="js/canvas.js"></script>
+</body>
+
+</html>
